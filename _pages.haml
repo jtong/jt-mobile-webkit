@@ -1,0 +1,21 @@
+#card_page(data-role="page")
+  %div(data-role="header")
+    %h1 Unplaned Timesheet
+  %div(data-role="content")
+    %a(href="#timesheet_page" data-role="button") Start
+
+#timesheet_page(data-role="page")
+  #header
+    %a(href="#card_page") Unplaned Timesheet
+  #wrapper
+    #scroller
+      %ul#thelist
+  #footer
+    %a(href="#" onclick="create_new_item()") New Break Point
+
+#comment_page(data-role="page")
+  =head_bar :href => "#timesheet_page", :title => "Comment"
+  %div(data-role="content")
+    %label(for="desc") Input a comment:
+    %textarea(name="desc" id="desc")
+    %a#commit_button(href="#timesheet_page" data-role="button" onclick="add_comment()") Commit

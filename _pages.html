@@ -1,0 +1,32 @@
+<div data-role='page' id='card_page'>
+  <div data-role='header'>
+    <h1>Unplaned Timesheet</h1>
+  </div>
+  <div data-role='content'>
+    <a data-role='button' href='#timesheet_page'>Start</a>
+  </div>
+</div>
+<div data-role='page' id='timesheet_page'>
+  <div id='header'>
+    <a href='#card_page'>Unplaned Timesheet</a>
+  </div>
+  <div id='wrapper'>
+    <div id='scroller'>
+      <ul id='thelist'></ul>
+    </div>
+  </div>
+  <div id='footer'>
+    <a href='#' onclick='create_new_item()'>New Break Point</a>
+  </div>
+</div>
+<div data-role='page' id='comment_page'>
+  <div data-role='header'>
+    <a data-inline='true' data-role='button' href='#timesheet_page'>Back</a>
+    <h1>Comment</h1>
+  </div>
+  <div data-role='content'>
+    <label for='desc'>Input a comment:</label>
+    <textarea id='desc' name='desc'></textarea>
+    <a data-role='button' href='#timesheet_page' id='commit_button' onclick='add_comment()'>Commit</a>
+  </div>
+</div>
